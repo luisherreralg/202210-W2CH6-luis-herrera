@@ -1,3 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
 
+body {
+  background-color: #d4f4dd;
+  width: 100vw;
+  height: 100vh;
+  min-width: 400px;
+}
+
+.header {
+  width: 100%;
+  height: 15vh;
+  background-color: #0e7c7b;
+}
+.header .header__nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.header .header__h1 {
+  margin: 0 2em;
+  color: #d4f4dd;
+  font-size: 3rem;
+}
+.header .header__h3 {
+  color: #d4f4dd;
+  font-size: 1.5rem;
+}
+.header .header__list {
+  display: flex;
+  align-items: center;
+}
+.header .header__ul {
+  color: #17bebb;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.header .header__menuContainer {
+  display: flex;
+  gap: 20%;
+  margin: 0 2em;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  margin: 5em 0;
+}
+.main .main__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0e7c7b;
+  width: 90%;
+  height: 200px;
+  border-radius: 50px;
+}
+.main .main__h3 {
+  font-size: 30px;
+  color: #d4f4dd;
+}
+.main .main__ul {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.main .main__li {
+  list-style: none;
+  background-color: #d4f4dd;
+  color: #0e7c7b;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 20px;
+}
+.main .main__li:hover {
+  background-color: #0e7c7b;
+  color: #17bebb;
+}
 
 /*# sourceMappingURL=sass.css.map */
