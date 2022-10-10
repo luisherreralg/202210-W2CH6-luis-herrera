@@ -11,7 +11,7 @@ body {
   background-color: #d4f4dd;
   width: 100vw;
   height: 100vh;
-  min-width: 400px;
+  min-width: 453px;
 }
 
 .header {
@@ -19,41 +19,44 @@ body {
   height: 15vh;
   background-color: #0e7c7b;
 }
-.header .header__nav {
+.header__nav {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   width: 100%;
   height: 100%;
 }
-.header .header__h1 {
-  margin: 0 2em;
+.header__h1 {
   color: #d4f4dd;
   font-size: 3rem;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin: 0.5em;
 }
-.header .header__h3 {
+.header__h3 {
   color: #d4f4dd;
   font-size: 1.5rem;
 }
-.header .header__list {
+.header__list {
   display: flex;
   align-items: center;
+  padding: 14px;
 }
-.header .header__ul {
+.header__ul {
   color: #17bebb;
   list-style: none;
   display: flex;
   gap: 20px;
 }
-.header .header__ul a {
+.header__ul a {
   color: #17bebb;
   cursor: pointer;
   text-decoration: none;
 }
-.header .header__menuContainer {
+.header__menuContainer {
   display: flex;
-  gap: 20%;
-  margin: 0 2em;
+  gap: 85px;
+  margin: 0 1em;
 }
 
 .main {
@@ -65,7 +68,7 @@ body {
   gap: 2em;
   margin: 5em 0;
 }
-.main .main__card {
+.main__card {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -75,11 +78,11 @@ body {
   height: 200px;
   border-radius: 50px;
 }
-.main .main__h3 {
+.main__h3 {
   font-size: 30px;
   color: #d4f4dd;
 }
-.main .main__ul {
+.main__ul {
   width: 100%;
   height: 60%;
   display: flex;
@@ -89,12 +92,12 @@ body {
   justify-content: center;
   gap: 50px;
 }
-.main .main__ul a {
+.main__ul a {
   color: #17bebb;
   cursor: pointer;
   text-decoration: none;
 }
-.main .main__li {
+.main__li {
   list-style: none;
   background-color: #d4f4dd;
   color: #0e7c7b;
@@ -104,9 +107,59 @@ body {
   border-radius: 20px;
   font-size: 20px;
 }
-.main .main__li:hover {
+.main__li:hover {
   background-color: #0e7c7b;
   color: #17bebb;
+}
+
+@media screen and (max-width: 1384px) {
+  .header__list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .header__ul {
+    gap: 8px;
+    margin-block-start: 10px;
+  }
+}
+@media screen and (max-width: 1030px) {
+  .header__menuContainer {
+    display: block;
+  }
+}
+@media screen and (max-width: 839px) {
+  .main .main__card {
+    height: 46vh;
+  }
+  .main .main__h3 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+  .main .main__ul {
+    justify-content: flex-start;
+    gap: 19px;
+    margin-block-start: 18px;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 839px) {
+  .header {
+    height: 24vh;
+  }
+  .header__nav {
+    flex-direction: column;
+  }
+  .header__list {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 519px) {
+  .header__ul {
+    gap: 0;
+    margin-block-end: 0;
+    padding-inline-start: 10px;
+  }
 }
 
 /*# sourceMappingURL=sass.css.map */
