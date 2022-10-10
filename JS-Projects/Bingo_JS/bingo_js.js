@@ -229,7 +229,7 @@ const playGame = () => {
         } else {
             isPlaying = false;
         }
-    } while (!won && isPlaying);
+    } while (isPlaying);
 
     if (won) {
         console.log(`

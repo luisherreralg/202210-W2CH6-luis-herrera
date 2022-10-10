@@ -654,6 +654,12 @@ const endGame = () => {
     );
 };
 
+const changeStatus = (i, bool) => {
+    questions[0][i].status = bool;
+    questions[1][i].status = bool;
+    questions[2][i].status = bool;
+};
+
 const game = () => {
     for (let i = 0; i < 27; i++) {
         randomArray = getRandomNumber();
@@ -666,22 +672,16 @@ const game = () => {
                 end = true;
                 return;
             } else if (answer === 'pasapalabra') {
-                questions[0][i].status === false;
-                questions[1][i].status === false;
-                questions[2][i].status === false;
+                changeStatus(i, false);
             } else if (answer === questions[randomArray][i].answer) {
                 letterInfo[i] = `[-]`;
                 printInfo('correcto');
-                questions[0][i].status = true;
-                questions[1][i].status = true;
-                questions[2][i].status = true;
+                changeStatus(i, true);
                 score[score.length - 1].aciertos =
                     score[score.length - 1].aciertos + 1;
             } else {
                 printInfo('incorrecto');
-                questions[0][i].status = false;
-                questions[1][i].status = false;
-                questions[2][i].status = false;
+                changeStatus(i, false);
                 score[score.length - 1].fallos =
                     score[score.length - 1].fallos + 1;
             }
@@ -697,22 +697,16 @@ const game = () => {
                 end = true;
                 return;
             } else if (answer === 'pasapalabra') {
-                questions[0][i].status === false;
-                questions[1][i].status === false;
-                questions[2][i].status === false;
+                changeStatus(i, false);
             } else if (answer === questions[randomArray][i].answer) {
                 letterInfo[i] = `[-]`;
                 printInfo('correcto');
-                questions[0][i].status = true;
-                questions[1][i].status = true;
-                questions[2][i].status = true;
+                changeStatus(i, true);
                 score[score.length - 1].aciertos =
                     score[score.length - 1].aciertos + 1;
             } else {
                 printInfo('incorrecto');
-                questions[0][i].status = false;
-                questions[1][i].status = false;
-                questions[2][i].status = false;
+                changeStatus(i, false);
                 score[score.length - 1].fallos =
                     score[score.length - 1].fallos + 1;
             }
