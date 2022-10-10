@@ -565,11 +565,6 @@ let win = false;
 let end = false;
 let randomArray = 0;
 
-// const timeOut = () => {
-//     throw new Error ("GAME OVER TIME OUT")
-// };
-// setTimeout(timeOut, 1000);
-
 const getRandomNumber = () => {
     const randomNumber = Math.floor(Math.random() * 3);
     return randomNumber;
@@ -651,7 +646,6 @@ const getUser = () => {
     return user;
 };
 getUser();
-// const username = getUser();
 
 const endGame = () => {
     const yourScore = score[score.length - 1];
