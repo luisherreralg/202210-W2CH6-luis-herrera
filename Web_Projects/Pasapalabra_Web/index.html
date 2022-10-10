@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Pasapalabra ISDI</h1>
+    </header>
+    <div class="modal-container">
+        <div class="modal">
+            <h2 id="modal-header">BIENVENIDO</h2>
+            <p id="modal-text">
+                Bienvenido al pasapalabra de ISDI Coders.
+                La partida tiene un límite de tiempo de 130s, una vez terminado el tiempo la partida finalizará. Para jugar solo hay que introducir la palabra que creas correcta y pulsar enter. Si quieres dejar alguna palabra para la siguiente vuelta, solo tienes que escribir "pasaplabra" o "pasa". ¡Mucha suerte!
+            </p>
+            <button class="close-button">EMPEZAR</button>
+        </div>
+    </div>
+    <div class="rosco-container">
+        <div class="rosco">
+            <div class="circle-wrapper">
+                <div class="game-info">
+                    <div class="circle-text">
+                        <h3 class="letter-info">TEXT</h3>
+                        <div class="text">
+                            <p id="question">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. A vitae consequatur totam
+                                deserunt
+                                eum, sint laborum.
+                            </p>
+                            <input id='input' type="text" placeholder="Escriba su respuesta" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+                <div class="letra a">A</div>
+                <div class="letra b">B</div>
+                <div class="letra c">C</div>
+                <div class="letra d">D</div>
+                <div class="letra e">E</div>
+                <div class="letra f">F</div>
+                <div class="letra g">G</div>
+                <div class="letra h">H</div>
+                <div class="letra i">I</div>
+                <div class="letra j">J</div>
+                <div class="letra k">K</div>
+                <div class="letra l">L</div>
+                <div class="letra m">M</div>
+                <div class="letra n">N</div>
+                <div class="letra ñ">Ñ</div>
+                <div class="letra o">O</div>
+                <div class="letra p">P</div>
+                <div class="letra q">Q</div>
+                <div class="letra r">R</div>
+                <div class="letra s">S</div>
+                <div class="letra t">T</div>
+                <div class="letra u">U</div>
+                <div class="letra v">V</div>
+                <div class="letra w">W</div>
+                <div class="letra x">X</div>
+                <div class="letra y">Y</div>
+                <div class="letra z">Z</div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="score-container">
+        <div class="timeout">
+            <p id="timeout-text">130</p>            
+        </div>
+        <div class="score">
+            <div class="fail">
+                <p>PALABRAS FALLADAS</p>
+                <p class="num-f">27</p>
+            </div>
+            <div class="rest">
+                <p>PALABRAS RESTANTES</p>
+                <p class="num-r">27</p>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

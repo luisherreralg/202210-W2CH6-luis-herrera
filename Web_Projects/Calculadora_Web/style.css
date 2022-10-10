@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+
+*{
+    font-family: 'League Spartan', sans-serif;
+}
+
+body {
+    margin: 0 auto;
+    height: 100vh;
+    background-color: #3B4663;
+    min-width: 609px;
+}
+
+
+
+.calculator {
+    width: 80%;
+    height: 80%;
+    margin: 10% auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 519px;
+    max-height: 519px;
+}
+
+.modal-container {
+    background-color: #3B4663;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    margin: 0 auto;
+}
+
+.modal {
+    color: white;
+    width: 600px;
+    background: #252D43;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 0 rgb(0 0 0 / 30%);
+    align-items: flex-start;
+}
+
+.modal button {
+    cursor: pointer;
+    margin: 20px auto;
+    padding: 5px 10px;
+    background-color: #F0F0F0;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 3px 0 rgba(255, 255, 255, 0.3);
+}
+
+.modal button:active {
+    background-color: #181F32;
+    box-shadow: 0 -2px 0 rgba(85, 85, 85, 0.3);
+}
+
+.modal p {
+padding: 3px 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.header {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.calculator img {
+    cursor: pointer;
+    width: 30px;
+}
+
+.calculator h1 {
+    margin: 0;
+    height: auto;
+    width: auto;
+    color: white;
+}
+
+.display {
+    background-color: #181F32;
+    height: 40%;
+    width: 100%;
+    margin: 5% 0 3% 0;
+    border-radius: 15px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 80px;
+    overflow-x: auto;
+}
+
+#display-text {
+    font-size: 60px;
+    padding-right: 5%;
+    color: white;
+    overflow: auto;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+#display-prev {
+    font-size: 20px;
+    padding-right: 5%;
+    color: white;
+    overflow: auto;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+    
+.keypad {
+    height: 100%;
+    background-color: #252D43;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 10px;
+    justify-content: center;
+}
+
+.keypad button {
+    color: #3C4453;
+    font-size: 35px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 15px;
+    width: 115px;
+    margin: 5px auto;
+    box-shadow: 0 4px 0 0 #b2a195;
+}
+
+.keypad button:nth-last-child(1),
+.keypad button:nth-last-child(2) {
+    grid-column: span 2;
+    width: 235px;
+}
+
+
+.keypad button:active {
+    color: white;
+    background-color: #40475B;
+    box-shadow: 0 -4px 0 0 #6a7697;
+}
+
+.keypad .reset {
+    color: white;
+    background-color: #A2B2E1;
+    box-shadow: 0 4px 0 0 #414D71;
+}
+
+.keypad .equal {
+    color: white;
+    background-color: #F96B5B;
+    box-shadow: 0 4px 0 0 #96271C;
+}
+
+.keypad .delete {
+    color: white;
+    background-color: #A2B2E1;
+    box-shadow: 0 4px 0 0 #414D71;
+}
+
