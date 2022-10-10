@@ -650,8 +650,8 @@ const getUser = () => {
 
     return user;
 };
-
-const username = getUser();
+getUser();
+// const username = getUser();
 
 const endGame = () => {
     const yourScore = score[score.length - 1];
