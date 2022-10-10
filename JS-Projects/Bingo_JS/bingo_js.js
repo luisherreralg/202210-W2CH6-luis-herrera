@@ -1,3 +1,5 @@
+import { getUserAlert } from './utils';
+
 let username;
 let carton = [];
 const poolNumbers = [
@@ -23,11 +25,9 @@ let score = [
 const getUser = () => {
     const user = prompt('Por favor, introduzca su nombre');
     if (user === '' || user === null || user.trim().length === 0) {
-        alert('Por favor, introduzca un nombre de usuario válido');
-        getUser();
+        getUserAlert();
     } else if (Number.isNaN(Number.parseFloat(user)) === false) {
-        alert('Por favor, introduzca un nombre de usuario válido');
-        getUser();
+        getUserAlert();
     } else {
         alert(`Bienvenido ${user} a ISDI Coders Bingo!`);
         username = user;

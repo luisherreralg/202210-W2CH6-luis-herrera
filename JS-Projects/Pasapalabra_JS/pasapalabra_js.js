@@ -685,10 +685,7 @@ const game = () => {
                 score[score.length - 1].fallos =
                     score[score.length - 1].fallos + 1;
             }
-        } else if (
-            questions[randomArray][i].status === false &&
-            end === false
-        ) {
+        } else if (questions[randomArray][i].status === false && end == false) {
             console.log(letterInfo);
             console.log(questions[randomArray][i].question);
             const answer = getAnswer();
@@ -747,7 +744,7 @@ const printResultados = () => {
 
 const checkIfWin = () => {
     for (let i = 0; i < 27; i++) {
-        if (questions[0][i].status === 0 || questions[0][i].status === false) {
+        if (questions[0][i].status === 0 || questions[0][i].status == false) {
             win = false;
             return;
         }
@@ -759,7 +756,7 @@ const gameCycle = () => {
     for (let i = 0; i < 27; i++) {
         if (questions[0][i].status === 0 && end === false) {
             game();
-        } else if (questions[0][i].status === false && end === false) {
+        } else if (questions[0][i].status == false && end == false) {
             printInfo('vuelta');
             game();
         }

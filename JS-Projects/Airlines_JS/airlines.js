@@ -1,3 +1,11 @@
+import {
+    alertAdminActions,
+    alertAskForAdmin,
+    alertGetUser,
+    alertIsNan,
+    alertAskForRole,
+} from './utils';
+
 let flights = [
     { id: 0, to: 'New York', from: 'Barcelona', cost: 700, scale: false },
     { id: 1, to: 'Los Angeles', from: 'Madrid', cost: 1100, scale: true },
@@ -17,11 +25,9 @@ let adminAction;
 const getUser = () => {
     const user = prompt('Por favor, introduzca su nombre');
     if (user === null || user.trim().length === 0) {
-        alert('Por favor, introduzca un nombre de usuario válido');
-        getUser();
+        alertGetUser();
     } else if (Number.isNaN(Number.parseFloat(user)) === false) {
-        alert('Por favor, introduzca un nombre de usuario válido');
-        getUser();
+        alertGetUser();
     } else {
         alert(`Bienvenido ${user} a ISDI Coders Airlines!`);
         username = user;
@@ -103,14 +109,12 @@ const askForRole = () => {
     const role = prompt(`Por favor ${username}, indica si eres (user/admin)`);
 
     if (role.trim().length === 0 || role === null) {
-        alert('Por favor introduce un rol válido');
-        askForRole();
+        alertAskForRole();
     } else if (
         role.toLocaleLowerCase() !== 'user' &&
         role.toLowerCase() !== 'admin'
     ) {
-        alert('Por favor introduce un rol válido');
-        askForRole();
+        alertAskForRole();
     } else if (role.toLowerCase() === 'admin') {
         askAdmin();
     } else {
@@ -124,14 +128,12 @@ const askAdmin = () => {
     );
 
     if (action.trim().length === 0) {
-        alert('Por favor introduzca una acción válida');
-        askAdmin();
+        alertAskForAdmin();
     } else if (
         action.toLowerCase() !== 'create' &&
         action.toLowerCase() !== 'delete'
     ) {
-        alert('Por favor introduzca una acción válida');
-        askAdmin();
+        alertAskForAdmin();
     } else {
         adminAction = action.toLowerCase();
         adminActions();
@@ -144,11 +146,9 @@ const userActions = () => {
     );
     const lowerPrice = flights.length - 1;
     if (precioFilter === null || precioFilter.trim().length === 0) {
-        alert('Por favor, introduzca una cifra válida');
-        userActions();
+        alertIsNan();
     } else if (Number.isNaN(Number.parseFloat(precioFilter))) {
-        alert('Por favor, introduzca una cifra válida');
-        userActions();
+        alertIsNan();
     } else if (flights[lowerPrice].cost > Number.parseFloat(precioFilter)) {
         alert(
             `No se han encontrado vuelos, ya que el precio mínimo por el que puede buscar un vuelo es de ${flights[lowerPrice].cost}€`
@@ -200,14 +200,11 @@ const adminActions = () => {
 const askAdminMoreActions = () => {
     let actions = prompt('¿Desea realizar otra acción? (y/n)');
     if (actions.toLowerCase().trim().length === 0) {
-        alert('Introduzca una respuesta válida');
-        askAdminMoreActions();
+        alertAdminActions();
     } else if (Number.isNaN(Number.parseFloat(actions)) === false) {
-        alert('Introduzca una respuesta válida');
-        askAdminMoreActions();
+        alertAdminActions();
     } else if (actions.toLowerCase() !== 'n' && actions.toLowerCase() !== 'y') {
-        alert('Introduzca una respuesta válida');
-        askAdminMoreActions();
+        alertAdminActions();
     } else if (
         actions.toLowerCase() === 'n' ||
         actions.toLowerCase() === null
