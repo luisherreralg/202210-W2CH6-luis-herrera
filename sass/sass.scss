@@ -18,7 +18,7 @@ body {
     background-color: $aeroblue-color;
     width: 100vw;
     height: 100vh;
-    min-width: 400px;
+    min-width: 453px;
 }
 
 .header {
@@ -26,7 +26,7 @@ body {
     height: 15vh;
     background-color: $teal-color;
 
-    .header__nav {
+    &__nav {
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -34,23 +34,26 @@ body {
         height: 100%;
     }
 
-    .header__h1 {
-        margin: 0 2em;
+    &__h1 {
         color: $aeroblue-color;
         font-size: 3rem;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin: 0.5em;
     }
 
-    .header__h3 {
+    &__h3 {
         color: $aeroblue-color;
         font-size: 1.5rem;
     }
 
-    .header__list {
+    &__list {
         display: flex;
         align-items: center;
+        padding: 14px;
     }
 
-    .header__ul {
+    &__ul {
         color: $tiffanyblue-color;
         list-style: none;
         display: flex;
@@ -62,10 +65,10 @@ body {
         }
     }
 
-    .header__menuContainer {
+    &__menuContainer {
         display: flex;
-        gap: 20%;
-        margin: 0 2em;
+        gap: 85px;
+        margin: 0 1em;
     }
 }
 
@@ -78,7 +81,7 @@ body {
     gap: 2em;
     margin: 5em 0;
 
-    .main__card {
+    &__card {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -89,12 +92,12 @@ body {
         border-radius: 50px;
     }
 
-    .main__h3 {
+    &__h3 {
         font-size: 30px;
         color: $aeroblue-color;
     }
 
-    .main__ul {
+    &__ul {
         width: 100%;
         height: 60%;
         display: flex;
@@ -109,7 +112,7 @@ body {
             text-decoration: none;
         }
     }
-    .main__li {
+    &__li {
         list-style: none;
         background-color: $aeroblue-color;
         color: $teal-color;
@@ -120,8 +123,72 @@ body {
         font-size: 20px;
     }
 
-    .main__li:hover {
+    &__li:hover {
         background-color: $teal-color;
         color: $tiffanyblue-color;
+    }
+}
+
+@media screen and (max-width: 1384px) {
+    .header__list {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .header__ul {
+        gap: 8px;
+        margin-block-start: 10px;
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    .header {
+        &__menuContainer {
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width: 839px) {
+    .main {
+        .main__card {
+            height: 46vh;
+        }
+
+        .main__h3 {
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+
+        .main__ul {
+            justify-content: flex-start;
+            gap: 19px;
+            margin-block-start: 18px;
+            flex-direction: column;
+        }
+    }
+}
+
+@media screen and (max-width: 839px) {
+    .header {
+        height: 24vh;
+        &__nav {
+            flex-direction: column;
+        }
+
+        &__list {
+            flex-direction: row;
+        }
+    }
+}
+
+@media screen and (max-width: 519px) {
+    .header {
+        &__ul {
+            gap: 0;
+            margin-block-end: 0;
+            padding-inline-start: 10px;
+        }
     }
 }
