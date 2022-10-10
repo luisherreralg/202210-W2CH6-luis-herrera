@@ -650,6 +650,7 @@ const getUser = () => {
 
     return user;
 };
+
 const username = getUser();
 
 const endGame = () => {

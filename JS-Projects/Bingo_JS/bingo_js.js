@@ -205,8 +205,6 @@ const playAgain = () => {
         won = false;
         isPlaying = true;
         checkline1 = true;
-        checkline2 = true;
-        checkline3 = true;
         playGame();
     } else if (
         decision.toLowerCase() !== 'y' &&
