@@ -46,6 +46,11 @@ body {
   display: flex;
   gap: 20px;
 }
+.header .header__ul a {
+  color: #17bebb;
+  cursor: pointer;
+  text-decoration: none;
+}
 .header .header__menuContainer {
   display: flex;
   gap: 20%;
@@ -84,6 +89,11 @@ body {
   align-items: center;
   justify-content: center;
   gap: 50px;
+}
+.main .main__ul a {
+  color: #17bebb;
+  cursor: pointer;
+  text-decoration: none;
 }
 .main .main__li {
   list-style: none;

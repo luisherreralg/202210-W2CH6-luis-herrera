@@ -56,6 +56,11 @@ body {
         list-style: none;
         display: flex;
         gap: 20px;
+        a {
+            color: $tiffanyblue-color;
+            cursor: pointer;
+            text-decoration: none;
+        }
     }
 
     .header__menuContainer {
@@ -99,6 +104,11 @@ body {
         align-items: center;
         justify-content: center;
         gap: 50px;
+        a {
+            color: $tiffanyblue-color;
+            cursor: pointer;
+            text-decoration: none;
+        }
     }
     .main__li {
         list-style: none;
